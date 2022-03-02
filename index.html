@@ -18,12 +18,8 @@
 
 <body>
     <header>
-        <section id="banner">
-        </section>
-
         <section id="header-container">
-            <!-- <div id="header-dropshadow-bottom"></div> -->
-            <div id="header-dropshadow-middle"></div>
+            <div id="header-dropshadow-overlay"></div>
             <div id="header-main">
                 <h1>William Gruszka</h1>
                 <nav>
@@ -37,13 +33,17 @@
     </header>
 
     <main>
-        <section id="faux-header">
-            <div id="faux-header-container">
-                <div id="faux-header-dropshadow-bottom"></div>
+        <!-- large header shadow that goes under the main stream / feed -->
+        <section id="underlay-header">
+            <div id="underlay-header-container">
+                <div id="underlay-header-dropshadow-bottom"></div>
             </div>
         </section>
         
+        <!-- the stream containing each section -->
         <section id="stream-container">
+
+            <!-- about me section -->
             <section id="about-me" class="card">
                 <h2 class="card-header">About Me</h2>
                 <div class="card-internal-layout">
@@ -57,28 +57,39 @@
                     <img src="./assets/images/wg_headshot_1.jpg" alt="William Gruszka - Headshot" class="sub-card">
                 </div>
             </section>
+
+            <!-- projects section -->
             <section id="projects" class="card">
                 <h2 class="card-header">Projects</h2>
                 <div class="card-internal-layout"> 
-                    <a href="https://wilgru.github.io/Horiseon-marketing-agency-site/" id="project-horiseon" class="sub-card project-card" style="background-image: url('./assets/images/project_1.png');">
-                        <h3>Horiseon - Marketing Agency</h3>
+                    <a href="https://wilgru.github.io/Horiseon-marketing-agency-site/" class="sub-card project-sub-card" 
+                    style="background-image: url('./assets/images/project_1.png');">
+                        <h3>Horiseon - Marketing Agency<br>
+                            <span>HTML / CSS</span>
+                        </h3>
                     </a>
-                    <a id="project-ph1" class="sub-card project-card" 
+                    <a id="project-ph1" class="sub-card project-sub-card" 
                     style="background-image: url('https://via.placeholder.com/550');">
-                        <h3>Placeolder Project 1</h3>
+                        <h3>Placeolder Project 1<br>
+                            <span>None</span>
+                        </h3>
                     </a>
-                    <a id="project-ph1" class="sub-card project-card" 
+                    <a id="project-ph1" class="sub-card project-sub-card" 
                     style="background-image: url('https://via.placeholder.com/550');">
-                        <h3>Placeolder Project 2</h3>
+                        <h3>Placeolder Project 2<br>
+                            <span>None</span>
+                        </h3>
                     </a>
                 </div>
             </section>
+
+            <!-- links section -->
             <section id="links" class="card">
                 <h2 class="card-header">links</h2>
                 <div class="card-internal-layout"> 
                     <button class="card-button">
                         <img src="./assets/images/logo_github.png" alt="github">
-                        <a href=""> 
+                        <a href="https://github.com/wilgru"> 
                             GitHub
                         </a>
                     </button>
@@ -89,13 +100,15 @@
                         </a>
                     </button>
                     <button class="card-button">
-                        <img src="./assets/images/logo_github.png" alt="youtube">
+                        <img src="./assets/images/logo_youtube.png" alt="youtube">
                         <a href=""> 
                             YouTube
                         </a>
                     </button>
                 </div>
             </section>
+
+            <!-- constact me section -->
             <section id="contact-me" class="card">
                 <h2 class="card-header">contact me</h2>
                 <div class="card-internal-layout"> 
@@ -110,13 +123,14 @@
                     </form>
                 </div>
             </section>
+
         </section>
     </main>
 
     <footer>
         <section id="footer-container">
             <h2>Made with ❤️ using HTML & CSS</h2>
-            <p>&copy; William Gruszka 2022. All rights reserved.</p>
+            <p>&copy; William Gruszka 2022</p>
         </section>
     </footer>
 </body>

@@ -28,16 +28,7 @@ header {
     height: 100px;
 }
 
-/* #header-dropshadow-bottom {
-    position: absolute;
-    height: 112px;
-    width: 100%;
-    left: 15px;
-    border-radius: 0 0 28px 28px;
-    background-color: var(--primary-color);
-} */
-
-#header-dropshadow-middle {
+#header-dropshadow-overlay {
     position: absolute;
     height: 108px;
     width: 100%;
@@ -68,7 +59,6 @@ header {
 }
 
 h1 {
-    /* margin: 15px 0; */
     margin: 0;
     font-size: 40px;
 }
@@ -79,22 +69,27 @@ nav {
     justify-content: space-evenly;
 }
 
-/* faux header style */
-#faux-header {
+a {
+    text-decoration: unset;
+    color: black;
+}
+
+/* underlay header style */
+#underlay-header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index:-1;
 }
 
-#faux-header-container {
+#underlay-header-container {
     position: relative;
     margin: 0 auto;
     width: 65%;
     height: 100px;
 }
 
-#faux-header-dropshadow-bottom {
+#underlay-header-dropshadow-bottom {
     position: absolute;
     height: 112px;
     width: 100%;
@@ -153,8 +148,6 @@ nav {
 }
 
 .card-button {
-    /* flex: 1 0 150px; */
-    
     margin: 5px;
     padding: 5px;
     display: flex;
@@ -189,21 +182,8 @@ nav {
     height: 250px;
 }
 
-/* footer section styles */
-#footer-container {
-    text-align: center;
-}
-
-#footer-container h2 {
-    font-size: 22px;
-}
-
-#footer-container p {
-    font-size: 10px;
-}
-
 /* projects */
-.project-card {
+.project-sub-card {
     margin: 5px 0;
     width: 100%;
     height: 100px;
@@ -217,25 +197,29 @@ nav {
     background-size: cover;
 }
 
-.project-card:hover {
+.project-sub-card:hover {
     height: 300px;
     filter: none;
 }
 
-.project-card h3 {
+.project-sub-card h3 {
     transition: 200ms;
 }
 
-.project-card:hover h3 {
+.project-sub-card:hover h3 {
     opacity: 25%;
 }
 
-.project-card h3 {
+.project-sub-card h3 {
     padding: 6px;
     text-align: center;
     background-color: white;
     border: var(--border-width) var(--border-style) var(--border-color);
-    border-radius: var(--border-radus);
+    border-radius: 20px;
+}
+
+.project-sub-card h3 span{
+    font-size: 12px;
 }
 
 /* links styles */
@@ -248,7 +232,9 @@ nav {
     justify-content: center;
 }
 
-input, label, textarea {
+#contact-me input, 
+#contact-me label, 
+#contact-me textarea {
     margin: 5px;
     flex: 1;
     flex-basis: 50%;
@@ -261,7 +247,21 @@ input, label, textarea {
     width: 80%;
 }
 
-/* responsive re-sizing */
+/* footer section styles */
+#footer-container {
+    text-align: center;
+}
+
+#footer-container h2 {
+    font-size: 22px;
+}
+
+#footer-container p {
+    font-size: 10px;
+}
+
+/* ========================================================= */
+/* responsive re-sizing - 1080px */
 @media (max-width: 1080px) {
     /* about me styles */
     #about-me div {
@@ -282,13 +282,14 @@ input, label, textarea {
     }
 }
 
+/* responsive re-sizing - 880px */
 @media (max-width: 880px) {
     /* header styles */
     #header-container {
         width: 100%;
     }
 
-    #header-dropshadow-middle {
+    #header-dropshadow-overlay {
         left: 0;
         border-radius: 0;
     }
@@ -298,12 +299,12 @@ input, label, textarea {
         border-radius: 0;
     }
 
-    /* faux header styles */
-    #faux-header-container {
+    /* underlay header styles */
+    #underlay-header-container {
         width: 100%;
     }
 
-    #faux-header-dropshadow-bottom {
+    #underlay-header-dropshadow-bottom {
         width: 100%;
         left: 0;
         border-radius: 0;
