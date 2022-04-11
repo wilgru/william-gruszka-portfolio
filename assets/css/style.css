@@ -202,24 +202,31 @@ a {
     filter: none;
 }
 
-.project-sub-card h3 {
-    transition: 200ms;
-}
-
-.project-sub-card:hover h3 {
-    opacity: 25%;
-}
-
-.project-sub-card h3 {
+.project-desc {
     padding: 6px;
     text-align: center;
     background-color: white;
     border: var(--border-width) var(--border-style) var(--border-color);
     border-radius: 20px;
+    transition: 200ms;
 }
 
-.project-sub-card h3 span{
+.project-desc h3 {
+    margin: 2px;
+}
+
+.project-desc p{
+    margin: 2px;
     font-size: 12px;
+}
+
+.project-extra-desc {
+    display: none;
+    transition: 200ms;
+}
+
+.project-sub-card:hover .project-extra-desc {
+    display: block;
 }
 
 /* links styles */
@@ -261,6 +268,7 @@ a {
 }
 
 /* ========================================================= */
+
 /* responsive re-sizing - 1080px */
 @media (max-width: 1080px) {
     /* about me styles */
