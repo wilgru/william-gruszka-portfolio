@@ -160,6 +160,7 @@ a {
     border-radius: var(--border-radus);
     box-shadow: 3px 3px 3px gray; 
     background-color: white;
+    transition: 200ms;
 }
 
 .card-button img {
@@ -232,6 +233,30 @@ a {
 /* links styles */
 #links .card-internal-layout {
     justify-content: center;
+}
+
+#github-btn:hover {
+    background-color: darkslateblue;
+}
+
+#linkedin-btn:hover {
+    background-color: dodgerblue;
+}
+
+#resume-btn:hover {
+    background-color: crimson;
+}
+
+#github-btn:hover a, #resume-btn:hover a, #linkedin-btn:hover a{
+    color: white;
+}
+
+#github-btn:hover img, #resume-btn:hover img {
+    filter: invert(1);
+}
+
+#linkedin-btn:hover img {
+    filter: brightness(100)
 }
 
 /* contact me styles */
