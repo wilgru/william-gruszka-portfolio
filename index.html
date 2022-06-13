@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- style sheet links -->
     <link rel="stylesheet" href="./assets/css/reset.css">
@@ -19,16 +20,21 @@
 <body>
     <header>
         <section id="header-container">
-            <div id="header-dropshadow-overlay"></div>
             <div id="header-main">
-                <h1>William Gruszka</h1>
-                <nav>
+                <div id="header-main-title">
+                    <h1>William Gruszka</h1>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <img id="Hamburger_icon" src="./assets/images/Hamburger_icon.svg.png">
+                    </a>
+                </div>
+                <nav id="topnav" class="topnav">
                     <a href="#about-me">About Me</a>
                     <a href="#projects">Projects</a>
                     <a href="#links">Links</a>
                     <a href="#contact-me">Contact Me</a>
                 </nav>
             </div>
+            <div id="header-dropshadow-overlay"></div>
         </section>
     </header>
 
@@ -138,5 +144,28 @@
             <p>&copy; William Gruszka 2022</p>
         </section>
     </footer>
+
+    <script>
+        function myFunction() {
+        var x = document.getElementById("topnav");
+        var a = document.getElementById("header-main");
+        var b = document.getElementById("header-main-title");
+        var c = document.getElementById("header-dropshadow-overlay");
+        var d = document.getElementById("underlay-header");
+        if (x.className === "topnav") {
+            a.className += "responsive"
+            b.className += "responsive"
+            c.className += "responsive"
+            d.className += "responsive"
+            x.className += " responsive";
+        } else {
+            a.className = ""
+            b.className = ""
+            c.className = ""
+            d.className = ""
+            x.className = "topnav";
+        }
+        }
+    </script>
 </body>
 </html>
