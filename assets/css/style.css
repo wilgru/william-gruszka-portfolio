@@ -58,6 +58,16 @@ header {
     justify-content: space-evenly;
 }
 
+#header-main-title {
+    display: flex;
+    justify-content: center;
+    /* padding: 10px; */
+}
+
+.icon {
+    display: none;
+}
+
 h1 {
     margin: 0;
     font-size: 40px;
@@ -330,6 +340,57 @@ a {
     #header-main {
         border-width: 0 0 3px 0;
         border-radius: 0;
+        justify-content: center;
+    }
+
+    #header-main h1 {
+        margin: auto 0;
+        display: inline;
+        padding-left: 10px;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    #header-main-title {
+        height: 100px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* responsive navbar (hamburger menu) */
+    #header-main.responsive {
+        height: fit-content;
+    }
+
+    #header-dropshadow-overlay.responsive {
+        top: 138px;
+    }
+
+    #underlay-header.responsive {
+        top: 138px;
+    }
+
+    nav.responsive a {
+        display: block;
+        font-size: larger;
+        margin: 10px;
+    }
+
+    nav.responsive {
+      display: block;
+    }
+
+    .icon {
+      margin: auto 0;
+      float: right;
+      display: block;
+    }
+
+    .icon img {
+        height: 46px;
+        padding-right: 10px;
     }
 
     /* underlay header styles */
