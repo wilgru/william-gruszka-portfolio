@@ -79,10 +79,10 @@ nav {
     justify-content: space-evenly;
 }
 
-a {
+/* a {
     text-decoration: unset;
     color: black;
-}
+} */
 
 /* underlay header style */
 #underlay-header {
